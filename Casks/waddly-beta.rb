@@ -8,7 +8,7 @@ cask "waddly-beta" do
   homepage "https://github.com/nyatinte/Waddly"
 
   depends_on arch: :arm64
-  depends_on macos: :ventura
+  depends_on macos: :sonoma
 
   app "Waddly.app", target: "Waddly Beta.app"
 end

@@ -15,12 +15,6 @@ The beta Cask installs `Waddly Beta.app`.
 
 Both Casks remove the quarantine attribute after installation and upgrades, so Gatekeeper's first-launch confirmation normally does not appear for Homebrew installs. Waddly is ad-hoc signed and not notarized; removing quarantine does not replace notarization or Developer ID signing. A DMG downloaded directly retains quarantine and may require approval in System Settings → Privacy & Security. Verify direct downloads with the `.sha256` file attached to the release.
 
-If you installed a Cask before this change, reinstall once to run the postflight step:
-
-```sh
-brew reinstall --cask waddly
-```
-
 ## Casks
 
 - `waddly-beta`: beta builds; the tap is updated manually, and beta releases do not update it automatically.

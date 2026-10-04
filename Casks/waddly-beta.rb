@@ -11,4 +11,9 @@ cask "waddly-beta" do
   depends_on macos: :sonoma
 
   app "Waddly.app", target: "Waddly Beta.app"
+
+  # Waddly is ad-hoc signed and not notarized; match the documented Homebrew behavior.
+  postflight_steps do
+    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/Waddly Beta.app"]
+  end
 end

@@ -6,16 +6,16 @@ Waddly supports Apple Silicon Macs running macOS 14 (Sonoma) or later.
 
 ## Install
 
+Homebrew 6.0 or later requires explicit trust for third-party Casks. This trusts only the Waddly Cask, not every current and future package or command in the tap.
+
 ```sh
 brew tap nyatinte/waddly
-brew install --cask waddly-beta
+brew trust --cask nyatinte/waddly/waddly
+brew install --cask waddly
 ```
 
-The beta Cask installs `Waddly Beta.app`.
-
-Both Casks remove the quarantine attribute after installation and upgrades, so Gatekeeper's first-launch confirmation normally does not appear for Homebrew installs. Waddly is ad-hoc signed and not notarized; removing quarantine does not replace notarization or Developer ID signing. A DMG downloaded directly retains quarantine and may require approval in System Settings → Privacy & Security. Verify direct downloads with the `.sha256` file attached to the release.
+The Cask removes the quarantine attribute after installation and upgrades, so Gatekeeper's first-launch confirmation normally does not appear for Homebrew installs. Waddly is ad-hoc signed and not notarized; removing quarantine does not replace notarization or Developer ID signing. A DMG downloaded directly retains quarantine and may require approval in System Settings → Privacy & Security. Verify direct downloads with the `.sha256` file attached to the release.
 
 ## Casks
 
-- `waddly-beta`: beta builds; the tap is updated manually, and beta releases do not update it automatically.
-- `waddly`: stable builds; the stable release workflow updates its version and checksum.
+- `waddly`: stable builds; the release workflow updates its version and checksum.

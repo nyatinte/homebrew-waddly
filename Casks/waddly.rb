@@ -1,6 +1,6 @@
 cask "waddly" do
-  version "1.9.4"
-  sha256 "0aef4f5465999f22d6f321abbc485c0d615c6be400b7e0c2eee0cc3fa6a823b6"
+  version "1.9.5"
+  sha256 "cd5bd505bf5ac4a3ea3795b46eed756df80b243f29596f3edb78fa5e462f6ca4"
 
   url "https://github.com/nyatinte/Waddly/releases/download/v#{version}/Waddly-#{version}-macos-arm64.dmg"
   name "Waddly"
